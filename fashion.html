@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sean Campbell</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style>
+
+  body {
+    font: 20px "Montserrat", sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 {
+      background-color: #3182bd; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 {
+    background-color: #6ba6c4; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 {
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav li a:hover {
+    color: #1abc9c;
+  }
+  .bg-4 {
+    background-color: #2f2f2f;
+    color: #ffffff;
+  }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Me</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="oldsite.html">OLD SITE</a></li>
+          <li><a href="https://github.com/campbellsean" target="_blank">My GitHub</a></li>
+          <li><a href="#">Fashion Generator</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="bg-1">
+  <div class="container text-center">
+    <h3>Random Outfit Generator</h3>
+    <img id = "top" src="img/item1.jpeg" class="img-responsive img-box" style="display:inline" width="350" height="350" alt="top" vspace="30">
+    <img id = "bottom" src="img/item65.jpeg" class="img-responsive img-box" style="display:inline" width="350" height="350" alt="bottom" vspace="15">
+    <img id = "shoes" src="img/item83.jpeg" class="img-responsive img-box" style="display:inline" width="350" height="350" alt="shoes" vspace="30">
+    <!--<h3>^ Outfit ^</h3>-->
+  </div>
+</div>
+<form>
+<div class="container-fluid bg-2 text-center">
+  <h3>This is Fashion</h3>
+  <a href="#" class="btn btn-default btn-lg"
+     onclick="myFunction()"> <span class="glyphicon glyphicon-refresh"></span> New Outfit
+  </a>
+</form>
+  <p id="demo"></p>
+</div>
+
+<script>
+function myFunction() {
+    // This function changes the images above
+
+    // Resetting Shoes
+
+    var randomShoes = Math.floor(Math.random() * (89 - 82 + 1)) + 82;
+    var newShoes = "img/item" + randomShoes + ".jpeg"
+    document.getElementById("shoes").setAttribute("src", newShoes);
+
+    // Resetting Top
+    var randomTop = Math.floor(Math.random() * (51)) + 1;
+    var newTop = "img/item" + randomTop + ".jpeg"
+    document.getElementById("top").setAttribute("src", newTop);
+
+    // Resetting Bottom
+    var randomBottom = Math.floor(Math.random() * (81 - 64 + 1)) + 64;
+    var newBottom = "img/item" + randomBottom + ".jpeg"
+    document.getElementById("bottom").setAttribute("src", newBottom);
+}
+</script>
+
+<script>
+function newItem() {
+    return "img/item6"
+}
+</script>
+
+<footer class="container-fluid bg-4 text-center">
+  <p>Made from scratch by Sean</p>
+</footer>
+
+</body>
+</html>
