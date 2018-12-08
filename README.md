@@ -1,0 +1,1 @@
+Information about the site, and what I plan on improving.
