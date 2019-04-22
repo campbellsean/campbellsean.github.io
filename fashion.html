@@ -76,48 +76,41 @@
 <div class="bg-1">
   <div class="container text-center">
     <h3>Random Outfit Generator</h3>
-    <img id = "top" src="img/item1.jpeg" class="img-responsive img-box" style="display:inline" width="350" height="350" alt="top" vspace="30">
-    <img id = "bottom" src="img/item65.jpeg" class="img-responsive img-box" style="display:inline" width="350" height="350" alt="bottom" vspace="15">
-    <img id = "shoes" src="img/item83.jpeg" class="img-responsive img-box" style="display:inline" width="350" height="350" alt="shoes" vspace="30">
-    <!--<h3>^ Outfit ^</h3>-->
+    <img id = "top" src="https://s3-us-west-2.amazonaws.com/fashion-generator/item2.jpeg" class="img-responsive img-box" style="display:inline" width="350" height="350" alt="top" vspace="30">
+    <img id = "bottom" src="https://s3-us-west-2.amazonaws.com/fashion-generator/item66.jpeg" class="img-responsive img-box" style="display:inline" width="350" height="350" alt="bottom" vspace="15">
+    <img id = "shoes" src="https://s3-us-west-2.amazonaws.com/fashion-generator/item84.jpeg" class="img-responsive img-box" style="display:inline" width="350" height="350" alt="shoes" vspace="30">
   </div>
 </div>
-<form>
+
 <div class="container-fluid bg-2 text-center">
   <h3>This is Fashion</h3>
   <a href="#" class="btn btn-default btn-lg"
-     onclick="myFunction()"> <span class="glyphicon glyphicon-refresh"></span> New Outfit
+    onclick="myFunction()"> <span class="glyphicon glyphicon-refresh"></span> New Outfit
   </a>
-</form>
-  <p id="demo"></p>
 </div>
 
 <script>
-function myFunction() {
-    // This function changes the images above
+  // This function randomly generates new src tags for the clothing images
+  function myFunction() {
+      // Top
+      var randomTop = Math.floor(Math.random() * (51)) + 1;
+      var newTop = "item" + randomTop + ".jpeg"
+      newTop = "https://s3-us-west-2.amazonaws.com/fashion-generator/" + newTop
+      document.getElementById("top").setAttribute("src", newTop);
 
-    // Resetting Shoes
+      // Bottom
+      var randomBottom = Math.floor(Math.random() * (81 - 64 + 1)) + 64;
+      console.log("Random Bottom: ", randomBottom);
+      var newBottom = "item" + randomBottom + ".jpeg"
+      newBottom = "https://s3-us-west-2.amazonaws.com/fashion-generator/" + newBottom
+      document.getElementById("bottom").setAttribute("src", newBottom);
 
-    var randomShoes = Math.floor(Math.random() * (89 - 82 + 1)) + 82;
-    var newShoes = "img/item" + randomShoes + ".jpeg"
-    document.getElementById("shoes").setAttribute("src", newShoes);
-
-    // Resetting Top
-    var randomTop = Math.floor(Math.random() * (51)) + 1;
-    var newTop = "img/item" + randomTop + ".jpeg"
-    document.getElementById("top").setAttribute("src", newTop);
-
-    // Resetting Bottom
-    var randomBottom = Math.floor(Math.random() * (81 - 64 + 1)) + 64;
-    var newBottom = "img/item" + randomBottom + ".jpeg"
-    document.getElementById("bottom").setAttribute("src", newBottom);
-}
-</script>
-
-<script>
-function newItem() {
-    return "img/item6"
-}
+      // Shoes
+      var randomShoes = Math.floor(Math.random() * (89 - 82 + 1)) + 82;
+      var newShoes = "item" + randomShoes + ".jpeg"
+      newShoes = "https://s3-us-west-2.amazonaws.com/fashion-generator/" + newShoes
+      document.getElementById("shoes").setAttribute("src", newShoes);
+  }
 </script>
 
 <footer class="container-fluid bg-4 text-center">
