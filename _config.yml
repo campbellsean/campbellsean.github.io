@@ -4,9 +4,5 @@ url: "https://campbellsean.github.io"
 
 permalink: /blog/:year/:month/:day/:title/
 
-# Old sites are served as-is, untouched by Jekyll
-keep_files:
-  - classic
-
 exclude:
   - README.md
