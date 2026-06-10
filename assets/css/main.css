@@ -70,7 +70,10 @@ a:hover { border-bottom-color: var(--accent); }
 main { padding: 56px 24px 80px; }
 
 /* Homepage hero */
-.hero { margin-bottom: 64px; }
+.hero {
+  margin-top: 24px;
+  margin-bottom: 64px;
+}
 
 .profile {
   width: 140px;
