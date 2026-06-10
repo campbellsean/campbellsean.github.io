@@ -2,7 +2,7 @@
   --bg: #faf7f2;
   --ink: #211e1a;
   --ink-soft: #6b645c;
-  --accent: #c2603e;
+  --accent: #2a5d8f;
   --rule: #e7e0d6;
 }
 
@@ -98,7 +98,7 @@ main { padding: 56px 24px 80px; }
 }
 
 .button:hover {
-  background: #a84f30;
+  background: #214a73;
   border-bottom: none;
 }
 
